@@ -10,6 +10,6 @@ associate_public_ip_address = <##PUBLIC_IP##>
 
 
 tags = {
-Name = "<##INSTANCE_NAME##>"
+Name = "Sbetu_vm"
 }
 }
