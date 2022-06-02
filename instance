@@ -4,8 +4,8 @@ ami = "ami-021d41cbdefc0c994"
 security_groups = ["sg-02ebf81c9fd2d0b68"]
 subnet_id = "subnet-0c59a465aaea21d4a"
 instance_type = "t2.micro"
-user_data = "${file("<##USER_DATA##>")}"
-associate_public_ip_address = <##PUBLIC_IP##>
+#user_data = "${file("<##USER_DATA##>")}"
+associate_public_ip_address = true
 
 
 
