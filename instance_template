@@ -4,7 +4,11 @@ resource "aws_instance" "Sbetu_web" {
         security_groups = ["sg-02ebf81c9fd2d0b68"]
         subnet_id = "subnet-0c59a465aaea21d4a"
         instance_type = "t2.micro"
-	user_data = "${file("user_data")}"
+	user_data = "${file("userdata")}"
+
+	provisioner "local-exec" {
+		command = "echo ${aws_instance.Sbetu_web.public_ip} > toto"
+	}
 
         tags = {
                 Name = "Sbetu_web"
