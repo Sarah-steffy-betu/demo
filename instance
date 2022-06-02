@@ -1,10 +1,10 @@
-resource "aws_instance" "<##INSTANCE_NAME##>" {
+resource "aws_instance" "Sbetu_vm" {
 key_name = "test_keypair"
 ami = "ami-021d41cbdefc0c994"
-security_groups = ["${aws_security_group.<##SECURITY_GROUP##>.id}"]
-subnet_id = "${aws_subnet.<##SUBNET_ID##>.id}"
+security_groups = ["sg-02ebf81c9fd2d0b68"]
+subnet_id = "subnet-0c59a465aaea21d4a"
 instance_type = "t2.micro"
-user_data = "${file("../../SCRIPTS/<##USER_DATA##>")}"
+user_data = "${file("<##USER_DATA##>")}"
 associate_public_ip_address = <##PUBLIC_IP##>
 
 
